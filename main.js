@@ -136,6 +136,9 @@ function startGame(e) {
 
                             // Hide gameboard
                             display.gameboardToggleHidden();
+
+                            // Show play again button
+                            display.playAgainToggleHidden();
                         } else {
 
                             // Switch turns
@@ -166,6 +169,9 @@ function startGame(e) {
 
                             // Hide gameboard
                             display.gameboardToggleHidden();
+
+                            // Show play again button
+                            display.playAgainToggleHidden();
                         } else {
 
                             // Switch turns
@@ -182,8 +188,12 @@ function startGame(e) {
 
             win = true;
 
-        }
+        } //<--- end of while loop
 
+        const playAgainBtn = document.getElementById('playAgain');
+        playAgainBtn.addEventListener('click', e => {
+            location.reload();
+        })
 
     })()
 
@@ -196,6 +206,7 @@ function displayController() {
     const boardDiv = document.getElementById('board');
     const nameForm = document.getElementById('nameForm');
     const messageDiv = document.getElementById('message');
+    const playAgainBtn = document.getElementById('playAgain');
     
 
     const hideGameboard = () => {
@@ -228,6 +239,8 @@ function displayController() {
         messageDiv.innerText = `${name}, congratulation. You win!!`;
     }
 
+    const playAgainToggleHidden = () => playAgainBtn.classList.toggle('hidden');
+
     return {
         hideGameboard, 
         gameboardToggleHidden, 
@@ -235,7 +248,8 @@ function displayController() {
         formToggleHidden, 
         startMessage,
         standardMessage,
-        winMessage
+        winMessage,
+        playAgainToggleHidden
     };
 }
 //  GENERATE TOKEN FUNCTION //
