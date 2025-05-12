@@ -1,0 +1,21 @@
+Pseudo Code for the Tic-Tac-Toe Game
+
+Get player's names
+    Randomly generate a player token
+    Create a new Player with name and token
+
+Start the game logic from the Game object 
+    If player token equals 'x' that player goes first
+    Display the current player name 
+    Display the board from the Board object
+    player chooses a cell
+        if cell is empty
+            allow cell to be chosen
+            if player has won
+                display win message
+                clear board
+                display play again button
+            switch to other player 
+        else 
+            player choose another cell 
+

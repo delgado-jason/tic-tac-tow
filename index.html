@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tic-Tac-Toe</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>Tic-Tac-Tow</h1>
+            <p id="message"></p>
+        </header>
+
+        <div class="container">
+            <form action="" id="nameForm">
+                <h2 class="form-header">Player 1</h2>
+                <label for="player1-name">What is your name?</label>
+                <input type="text" id="p1-name">
+
+                <h2 class="form-header">Player 2</h2>
+                <label for="player2-name">What is your name?</label>
+                <input type="text" id="p2-name">
+                <button id="formBtn">Submit</button>
+            </form>
+
+            <div id="board" class="hidden board">
+                <cell id="1" class="cell"></cell>
+                <cell id="2" class="cell"></cell>
+                <cell id="3" class="cell"></cell>
+                <cell id="4" class="cell"></cell>
+                <cell id="5" class="cell"></cell>
+                <cell id="6" class="cell"></cell>
+                <cell id="7" class="cell"></cell>
+                <cell id="8" class="cell"></cell>
+                <cell id="9" class="cell"></cell>
+            </div>
+        </div>
+
+        <script src="./main.js" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+body {
+    --bg-color: rgb(4, 22, 41);
+    --font-color: rgb(197, 205, 213);
+    --board-color: rgb(185, 32, 32);
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1em;
+    padding-top: 40px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+.cell {
+    background-color: var(--board-color);
+    width: 100px;
+    height: 100px;
+    display: block;
+    border: 2px solid black;
+}
+
+.cell:hover {
+    background-color: rgb(255, 72, 0);
+}
+
+.win-message {
+    font-size: 3rem;
+    padding-top: 300px;
+}
